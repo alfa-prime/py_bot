@@ -10,10 +10,5 @@ class States(Helper):
     """
     mode = HelperMode.snake_case
 
-    START = ListItem()
-    BEGIN = ListItem()
-    INFO = ListItem()
-    HELP = ListItem()
-    SEARCH_OR_OFFER = ListItem()
     SEARCH = ListItem()
     OFFER = ListItem()
