@@ -11,4 +11,8 @@ async def on_shutdown(dp):
 
 
 if __name__ == '__main__':
-    executor.start_polling(dp, skip_updates=True, on_shutdown=on_shutdown)
+    try:
+        executor.start_polling(dp, skip_updates=True, on_shutdown=on_shutdown)
+    except Exception as e:
+        print(e, "CHECK BOT_TOKEN SETTINGS IN .env")
+
