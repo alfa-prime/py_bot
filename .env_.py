@@ -1,9 +1,7 @@
 BOT_TOKEN = 'PLACE TOKEN HERE'
-BOT_VERSION = '0.1'
 
-# Данные redis-клиента
-REDIS_HOST = 'localhost'
-REDIS_PORT = 6379
+# Log levels, possibly values: CRITICAL, ERROR, WARNING, INFO, DEBUG
+LOG_LEVEL = 'DEBUG'
 
-# По умолчанию пароля нет. Он будет на сервере
-REDIS_PASSWORD = None
+# Log outputs, possibly values: CONSOLE, FILE, CONSOLE_AND_FILE
+LOG_OUTPUT = 'CONSOLE'
