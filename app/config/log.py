@@ -10,16 +10,16 @@ LOG_LEVELS = ["CRITICAL", "ERROR", "WARNING", "INFO", "DEBUG"]
 LOG_HANDLERS = {
     "CONSOLE": lambda: (logging.StreamHandler(),),
     "FILE": lambda: (logging.FileHandler(set_log_file_name()),),
-    "CONSOLE_AND_FILE": lambda: (logging.StreamHandler(), logging.FileHandler(set_log_file_name()),),
+    "CONSOLE_AND_FILE": lambda: (logging.StreamHandler(), logging.FileHandler(set_log_file_name())),
 }
 
 
 def set_log_file_name():
     file_name = time.strftime("%Y-%m-%d-%H_%M_%S") + '.log'
-    dir_ = Path('./', 'logs')
-    if not dir_.exists():
-        dir_.mkdir()
-    return Path(dir_, file_name)
+    logs_dir = Path('./', 'logs')
+    if not logs_dir.exists():
+        logs_dir.mkdir()
+    return Path(logs_dir, file_name)
 
 
 # если LOG_OUTPUT не указан или указан неверно, то устанавливается вывод в CONSOLE
